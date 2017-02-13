@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inline Block</title>
+    <style type="text/css">
+    	*{
+    		margin: 0;
+    		padding: 0;
+    	}
+		/* use grouped tag selectors to give a background color */
+		main, article{
+			background-color: rgba(0, 0, 255, 0.2);
+		}
+		main{
+			width: 900px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		article{
+			width: 300px;
+			height: 300px;
+			display: inline-block;
+			/* border: width | style | color; */
+			border: 1px solid #006FFF;
+			/* 300 px - 2*1 px = 298 px */
+			margin-right: -4px;
+			width: 298px;
+			margin: 10px;
+			/* 298px - 2*10px = 278px */
+			width: 275px;
+		}
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <article>1</article>
+        <article>2</article>
+        <article>3</article>
+    </main>
+</body>
+
+</html>

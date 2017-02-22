@@ -4,7 +4,12 @@ Concept: My plan is to create an electronics and video game news and review site
 
 Existing website: https://www.gamefaqs.com/
 
-Mockups: https://github.com/apr340/DM2193/blob/master/Midterm/Main%20Page.png
+Site map: https://github.com/apr340/DM2193/blob/master/Midterm/Midterm%20Proposal%20Site%20Map.pdf
+
+Mockups: Main Page: https://github.com/apr340/DM2193/blob/master/Midterm/Main%20Page.png
+News Page: https://github.com/apr340/DM2193/blob/master/Midterm/News%20Page.png
+Reviews Page: https://github.com/apr340/DM2193/blob/master/Midterm/Review%20Page.png
+Forums Page: https://github.com/apr340/DM2193/blob/master/Midterm/Forum%20Page.png
 
 Concepts I have learned: Nav bars, using fonts from google, drop down menus.
 

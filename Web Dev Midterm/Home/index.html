@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Starware News</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/grid.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+</head>
+
+<body>
+    <ul>
+        <a href="index.html"><h1>Starware</h1></a>
+        <li><a href="../Forums/index.html">Forums</a></li>
+        <li><a href="../Reviews/index.html">Reviews</a></li>
+        <li><a href="../News/index.html">News</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+    </ul>
+    <div class="main">
+        <div class="slideshow-block">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <a href="#"><img src="../Images/Zelda_Breath_of_the_Wild.jpg" style="width:100%"></a>
+                    <div class="text">The Legend of Zelda: Breath of the Wild Review</div>
+                </div>
+                <div class="mySlides fade">
+                    <a href="#"><img src="../Images/Horizon_Zero_Dawn.jpg" style="width:100%"></a>
+                    <div class="text">Horizon: Zero Dawn Review</div>
+                </div>
+                <div class="mySlides fade">
+                    <a href="#"><img src="../Images/Resident-Evil-7.jpg" style="width:100%"></a>
+                    <div class="text">Resident Evil 7 Review</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <!-- News Section -->
+        <div class="container clearfix">
+            <h2>News</h2>
+            <div class="grid_6 clearfix">
+                <a href="#"><img src="../Images/Monitor.jpg"></a>
+                <a href="#"><h3>LG's New Monitor</h3></a>
+                <p>LG’s 31.5-inch 4K HDR monitor is available to pre-order for $999.</p>
+            </div>
+            <div class="grid_6">
+                <a href="#"><img src="../Images/Intel_SSD.jpg"></a>
+                <a href="#"><h3>Intel Optane DC P4800X</h3></a>
+                <p>The first SSD with 3D XPoint Technology promises big changes.</p>
+            </div>
+            <div class="grid_6">
+                <a href="#"><img src="../Images/Custom_GTX_1080_Ti.jpg"></a>
+                <a href="#"><h3>Every Custom GeForce GTX</h3></a>
+                <a href="#"><h3>1080 Ti Revealed So Far</h3></a>
+                <p>Nvidia's GeForce GTX 1080 Ti was limited to Founders Edition reference models at launch, but partners like EVGA and Zotac are already teasing custom versions.</p>
+            </div>
+        </div>
+        <!-- Reviews Section -->
+        <div class="container-two clearfix">
+            <h2>Reviews</h2>
+            <div class="grid_6">
+                <a href="#"><img src="../Images/Nier_Automata.jpg"></a>
+                <a href="#"><h3>Nier: Automata Review</h3></a>
+                <p>An action role-playing video game developed by PlatinumGames and published by Square Enix for PlayStation 4 and Microsoft Windows.</p>
+            </div>
+            <div class="grid_6">
+                <a href="#"><img src="../Images/For_Honor.jpg"></a>
+                <a href="#"><h3>For Honor Review</h3></a>
+                <p>A hack and slash fighting game developed and published by Ubisoft for Microsoft Windows, PlayStation 4, and Xbox One.</p>
+            </div>
+            <div class="grid_6">
+                <a href="#"><img src="../Images/Persona_5.jpg"></a>
+                <a href="#"><h3>Persona 5 Review</h3></a>
+                <p>A role-playing video game developed by Atlus for PlayStation 3 and PlayStation 4.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+    </script>
+</body>
+
+</html>

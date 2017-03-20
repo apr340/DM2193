@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Starware News</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/grid.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+</head>
+
+<body>
+    <ul>
+        <a href="../Home/index.html"><h1>Starware</h1></a>
+        <li><a href="../Forums/index.html">Forums</a></li>
+        <li><a href="../Reviews/index.html">Reviews</a></li>
+        <li><a href="index.html" class="active">News</a></li>
+        <li><a href="../Home/index.html">Home</a></li>
+    </ul>
+    	<h1>News</h1>
+    <div class="main-two">
+    <!-- Slideshow for bigger articles -->
+        <div class="slideshow-block">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <a href="#"><img src="../Images/LG_Monitor.jpg" style="width:100%"></a>
+                    <div class="text">New Monitor From LG</div>
+                </div>
+                <div class="mySlides fade">
+                    <a href="#"><img src="../Images/Intel_picture.jpg" style="width:100%"></a>
+                    <div class="text">Intel Optane SSD P4800X</div>
+                </div>
+                <div class="mySlides fade">
+                    <a href="#"><img src="../Images/GeForce_1080_Ti.jpg" style="width:100%"></a>
+                    <div class="text">Every Custom GeForce GTX 1080 Ti Revealed So Far</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <!-- Games Section -->
+        <div class="container clearfix">
+            <h2>Games</h2>
+            <div class="grid_6 clearfix">
+                <a href="#"><img src="../Images/Overwatch.jpg"></a>
+                <a href="#"><h3>Blizzard Is Testing Big</h3></a>
+                <a href="#"><h3>Changes For Overwatch's</h3></a>
+                <a href="#"><h3>Lúcio</h3></a>
+                <p>The DJ hero is being reworked on the Overwatch PTR.</p>
+            </div>
+            <div class="grid_6">
+                <a href="#"><img src="../Images/Sonic-Forces.jpg"></a>
+                <a href="#"><h3>Sonic Forces Teased In</h3></a>
+                <a href="#"><h3>Brief New Trailer</h3></a>
+                <p>Sega's latest 3D Sonic looks like this.</p>
+            </div>
+            <div class="grid_6">
+                <a href="#"><img src="../Images/Prey.jpg"></a>
+                <a href="#"><h3>Gameplay From the</h3></a>
+                <a href="#"><h3>Upcoming Prey</h3></a>
+                <p>A look into the first 35 minutes.</p>
+            </div>
+        </div>
+        <!-- Electronics Section -->
+        <div class="container-two clearfix">
+            <h2>Electronics</h2>
+            <div class="grid_6">
+                <a href="#"><img src="../Images/Infra-Red-Lamp.png"></a>
+                <a href="#"><h3>The Envavo Heatbuff: an</h3></a>
+                <a href="#"><h3>infra-red lamp to keep your</h3></a>
+                <a href="#"><h3>fingers warm as you play</h3></a>
+                <p>This is either the dumbest peripheral we've seen in years, or the smartest.</p>
+            </div>
+            <div class="grid_6">
+                <a href="#"><img src="../Images/Acer_desktop.jpg"></a>
+                <a href="#"><h3>Acer desktop with Core</h3></a>
+                <a href="#"><h3>i5-7400 is on sale for $400</h3></a>
+                <p>Turn this into a budget gaming PC by adding a GeForce GTX 1050 Ti.</p>
+            </div>
+            <div class="grid_6">
+                <a href="#"><img src="../Images/EVGA.jpg"></a>
+                <a href="#"><h3>EVGA adds G-Sync support</h3></a>
+                <a href="#"><h3>to 17.3-inch SC17 gaming</h3></a>
+                <a href="#"><h3>laptop</h3></a>
+                <p>Updated and on sale.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Starware News</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/grid.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+</head>
+
+<body>
+    <ul>
+        <a href="../Home/index.html"><h1>Starware</h1></a>
+        <li><a href="../Forums/index.html">Forums</a></li>
+        <li><a href="index.html"  class="active">Reviews</a></li>
+        <li><a href="../News/index.html">News</a></li>
+        <li><a href="../Home/index.html">Home</a></li>
+    </ul>
+    	<h1>Reviews</h1>
+    <div class="main-two">
+        <div class="slideshow-block">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <a href="#"><img src="../Images/Nier_Automata.jpg" style="width:100%"></a>
+                    <div class="text">Nier: Automata Review</div>
+                </div>
+                <div class="mySlides fade">
+                    <a href="#"><img src="../Images/For_Honor.jpg" style="width:100%"></a>
+                    <div class="text">For Honor Review</div>
+                </div>
+                <div class="mySlides fade">
+                    <a href="#"><img src="../Images/Persona_5.jpg" style="width:100%"></a>
+                    <div class="text">Persona 5 Review</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <!-- News Section -->
+        <div class="container clearfix">
+            <h2>Reviews</h2>
+            <div class="grid_6 clearfix">
+                <a href="#"><img src="../Images/Horizon_Zero_Dawn.jpg"></a>
+                <a href="#"><h3>Horizon: Zero Dawn Review</h3></a>
+                <p>An action role-playing video game developed by Guerrilla Games and published by Sony Interactive Entertainment for the PlayStation 4.</p>
+            </div>
+            <div class="grid_6">
+                <a href="#"><img src="../Images/Zelda_Breath_of_the_Wild.jpg"></a>
+                <a href="#"><h3>Breath of the Wild Review</h3></a>
+                <p>An action-adventure video game developed and published by Nintendo for the Nintendo Switch and Wii U video game consoles.</p>
+            </div>
+            <div class="grid_6">
+                <a href="#"><img src="../Images/Resident-Evil-7.jpg"></a>
+                <a href="#"><h3>Resident Evil 7 Review</h3></a>
+                <p>A survival horror video game developed and published by Capcom. The game was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One in January 2017.</p>
+            </div>
+        </div>
+        <!-- Reviews Section -->
+        <div class="container-two clearfix">
+            <h2>Reviews</h2>
+            <div class="grid_6">
+                <a href="#"><img src="../Images/FFXV.jpg"></a>
+                <a href="#"><h3>Final Fantasy XV Review</h3></a>
+                <p>An open world action role-playing video game developed and published by Square Enix for the PlayStation 4 and Xbox One home consoles.</p>
+            </div>
+            <div class="grid_6">
+                <a href="#"><img src="../Images/Danganronpa_V3.jpg"></a>
+                <a href="#"><h3>Danganronpa V3 Review</h3></a>
+                <p>An adventure visual novel video game developed by Spike Chunsoft for PlayStation 4, PlayStation Vita and Microsoft Windows.</p>
+            </div>
+            <div class="grid_6">
+                <a href="#"><img src="../Images/Nioh.jpg"></a>
+                <a href="#"><h3>Nioh Review</h3></a>
+                <p>An action role-playing video game developed by Team Ninja for the PlayStation 4.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+    </script>
+</body>
+
+</html>

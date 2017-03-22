@@ -5,17 +5,15 @@
     font-family: Verdana, sans-serif;
 }
 
+
 /*Working on the navigation bar*/
+
 h1 {
-    margin: 0px;
+    margin: -6px;
     padding: 0px;
-    margin-top: 50px;
-    margin-left: 11%;
-    text-shadow:
-    -1px -1px 0 white,
-    1px -1px 0 white,
-    -1px 1px 0 white,
-    1px 1px 0 white;
+    margin-top: 54px;
+    margin-left: 13%;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 ul {
@@ -27,6 +25,7 @@ ul {
     top: 0;
     z-index: 99999;
     box-shadow: 0 0 5px #111;
+    min-width: 700px;
 }
 
 ul h1 {
@@ -36,11 +35,7 @@ ul h1 {
     color: #111;
     position: fixed;
     margin-left: 50px;
-    text-shadow:
-    -1px -1px 0 white,
-    1px -1px 0 white,
-    -1px 1px 0 white,
-    1px 1px 0 white;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
     font-family: 'Exo 2', sans-serif;
     font-size: 50px;
 }
@@ -64,12 +59,16 @@ ul li a {
     padding: 16px;
     color: #333;
     text-decoration: none;
+    transition: 0.6s ease;
 }
 
 ul a img {
     position: fixed;
-    top: 2px;
-    left: 10px;
+    top: 0px;
+    left: 50px;
+    margin: 0;
+    padding: 0;
+    width: 210px;
 }
 
 ul li a:hover {
@@ -80,80 +79,97 @@ ul li a:hover {
 ul li a.active {
     background-color: #5781c9;
 }
-/*end of navigation bar*/
+
+
+/*End of navigation bar*/
 
 body {
-	/*background-color: #f7f2ec;*/
-	padding-bottom: 30px;
+    /*background-color: #f7f2ec;*/
+    padding-bottom: 30px;
     /*background-color: rgba(147, 188, 255,0.1);*/
-    background-color: rgba(0,0,0,0.5);
+    /*Gives the page its grey background*/
+    background-color: rgba(0, 0, 0, 0.38);
 }
+
 
 /*edditing 996 grid for the articles*/
+
 .grid_6 {
-	border-top: 2px solid #111;
-	border-left: 2px solid #111;
-	border-right: 2px solid #111;
-	float: left;
-    background-color: rgba(200,200,200,0.9);
+    border-top: 2px solid #111;
+    border-left: 2px solid #111;
+    border-right: 2px solid #111;
+    float: left;
+    background-color: rgba(200, 200, 200, 0.9);
 }
 
-.grid_6:last-child{
-	border-bottom: 2px solid #111;
+.grid_6:last-child {
+    border-bottom: 2px solid #111;
 }
 
 .grid_6 a {
-	text-decoration: none;
-	display: inline-block;
+    text-decoration: none;
+    display: inline-block;
     float: left;
 }
 
 .grid_6 h3 {
-	margin: 0;
+    margin: 0;
     margin-left: 5px;
-	color: #222;
+    color: #222;
     width: 100%;
     display: inline-block;
 }
 
-.grid_6 a img{
-	margin: 5px;
+.grid_6 a img {
+    margin: 5px;
     width: 140px;
     display: inline-block;
 }
 
 .grid_6 p {
-	margin-left: 5px;
-	margin-bottom: 5px;
-	display: inline-block;
-	color: #000;
-	width: 66%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #000;
+    width: 66%;
     font-size: 90%;
 }
+
+
 /*end of grid edits*/
 
-/*main will be holding all the elements on the page*/
+
+/*Main will be holding all the elements on the page
+
+First Main is for the home page which has just enough of a top margin to go past the nav bar.
+The second main is for the news and reviews pages and lack this margin since the h1 above
+it has the margin instead*/
+
 .main {
     margin-top: 70px;
-    margin-left: 10%;
+    margin-left: 12%;
     /*background-color: #f2f1ed;*/
     background-color: #f7f2ec;
     display: inline-block;
     box-shadow: 0px 0px 10px #444;
-    width: 80%;
+    width: 76%;
+    min-width: 600px;
 }
 
 .main-two {
     margin-top: 5px;
-    margin-left: 10%;
+    margin-left: 12%;
     /*background-color: #f2f1ed;*/
     background-color: #f7f2ec;
     display: inline-block;
     box-shadow: 0px 0px 10px #444;
-    width: 80%;
+    width: 76%;
+    min-width: 600px;
 }
 
+
 /*Slideshow to be used on multiple pages*/
+
 .mySlides {
     display: none
 }
@@ -162,12 +178,19 @@ body {
     width: 100%;
     position: relative;
     margin: auto;
+    /*In case I want a border around the slideshow*/
+    /*border-bottom: 2px solid rgba(0,0,0,0.2);*/
 }
 
-.slideshow-block{
-	background-color: rgba(0,0,0,0.6);
-	padding-bottom: 10px;
+.slideshow-block {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 10px;
+    /*In case I want a border around the slideshow*/
+    /*border: 2px solid rgba(0,0,0,1);*/
 }
+
+
+/*For the arrows on the slideshow*/
 
 .prev,
 .next {
@@ -194,22 +217,23 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+
 /*slideshow text*/
+
 .text {
     color: #f2f2f2;
     font-size: 22px;
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     padding: 8px 12px;
     position: absolute;
     bottom: 0px;
     width: 100%;
     text-align: center;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
+
+/*For the dots underneath the slideshow. Meant to help navigate between articles*/
 
 .dot {
     cursor: pointer;
@@ -235,46 +259,81 @@ body {
     animation-name: fade;
     animation-duration: 1.5s;
 }
+
+
 /*end of slideshow*/
 
+
 /*meant to hold the news and review sections*/
-.container, .container-two{
-	background-color: #f2f1ed;
+
+.container,
+.container-two {
+    background-color: #f2f1ed;
 }
 
 .container h2 {
-	margin-left: 15px;
+    margin-left: 15px;
 }
 
 .container-two h2 {
     margin-left: 15px;
 }
 
-.forumContainer {
-    margin-left: 10%;
-    width: 80%;
+
+/*forumContainer is meant to properly hold all forum posts.
+standardContainer is meant to properly hold the articles on the other pages*/
+
+.forumContainer,
+.standardContainer {
     background-color: #f7f2ec;
-    box-shadow: 0px 0px 5px #444;
     margin-bottom: 20px;
 }
 
-.forumBlock {
+.forumContainer {
+    margin-left: 12%;
+    margin-top: 4px;
+    box-shadow: 0px 0px 5px #444;
+    width: 76%;
+}
+
+.standardContainer a {
+    text-decoration: none;
+    display: inline-block;
+    float: left;
+}
+
+.standardContainer {
+    margin: 1%;
+    width: 48%;
+    display: inline-block;
+    float: left;
+}
+
+
+/*forumBlock holds individual forum posts.
+standardBlock holds individual articles*/
+
+.forumBlock,
+.standardBlock {
     border-left: 2px solid #111;
     border-top: 2px solid #111;
     border-right: 2px solid #111;
 }
 
-.forumBlock:last-child {
+.forumBlock:last-child,
+.standardBlock:last-child {
     border-bottom: 2px solid #111;
 }
 
-.forumBlock a {
+.forumBlock a,
+.standardBlock a {
     text-decoration: none;
     color: #111;
     display: inline-block;
 }
 
-.forumBlock h2 {
+.forumBlock h2,
+.standardBlock h2 {
     padding: 10px;
     background-color: #a8cde6;
 }
@@ -284,9 +343,32 @@ body {
     padding-left: 10px;
 }
 
+.standardBlock h3 {
+    margin: 0;
+    margin-left: 5px;
+    color: #222;
+    width: 100%;
+    display: inline-block;
+}
+
 .forumBlock p {
     padding: 10px;
     padding-top: 0;
+}
+
+.standardBlock p {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #000;
+    width: 65%;
+    font-size: 90%;
+}
+
+.standardBlock a img {
+    margin: 5px;
+    width: 140px;
+    display: inline-block;
 }
 
 @-webkit-keyframes fade {

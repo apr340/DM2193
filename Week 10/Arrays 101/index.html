@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays 101</title>
+	<script type="text/javascript">
+		// declare a variable called months without assigning a value or a type
+		var months;
+		console.log(months);
+		// assign an empty array as the value of month
+		months = [];
+		console.log(months);
+
+		months = ["January", "February", "March", "April", "May", "June"];
+		// we can access the lenght of an array using .length property
+		console.log(months.length);
+
+		var lastMonth = months.pop();
+		console.log(months.length);
+		console.log(months);
+		console.log("We just removed " + lastMonth + " from the calendar");
+
+		// what if we want to log the 2nd month in our year
+		console.log(months[1]);
+
+		// months.push("june");
+		months.push(lastMonth);
+		console.log(months);
+
+		for (var i = 0; i < months.length; i++){
+			console.log(i + " : " + months[i]);
+		}
+
+		// for (var i = months.length; i > 0; i--){
+		// 	var dm = months.pop();
+		// 	console.log("Deleted " + dm + " the new array length is " + months.length);
+		// }
+
+		// console.log(months[3]);
+
+		// picking a random number between 0 and the length of our array
+		var rn = Math.round(Math.random() * months.length);
+		console.log(months[rn]);
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

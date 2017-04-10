@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JSON 101</title>
+    <script type="text/javascript">
+    var customer = {
+        firstName: "Tony",
+        lastName: "Pony",
+        pet: ['dog', 'cat', 'iguana']
+    }
+
+    console.log(customer);
+    // access our customers first name using dot notation
+    console.log(customer.firstName);
+    // how would we get the last name?
+    console.log(customer.lastName);
+    // pass in a string as our 'index' in square brackets (this is neccessary when we have keys with - in them)
+    console.log(customer['lastName']);
+    // what if we want tony's second pet?
+    console.log(customer.pet[1]);
+    // log out all of tony's pets
+    for (var i = 0; i < customer.pet.length; i++) {
+        console.log(customer.pet[i]);
+    }
+
+    // we can also add a new key value to our object
+    customer.age = 45;
+    console.log(customer.age);
+    customer.lastName = 'Bologna';
+    console.log(customer);
+    customer.pet.push('chicken');
+    console.log(customer);
+
+    var myClass = {
+        me: {
+            firstName: "Tony",
+            lastName: "Pony",
+            pets: ["Dog", "Cat", "Iguana"]
+        },
+        others: [{
+            firstName: "Sally",
+            lastName: "Omally",
+            pets: ["ButterFly", "Bird"]
+        }, {
+            firstName: "Billy",
+            lastName: "Goat",
+            pets: ["Snake", "Fish"]
+        }, {
+            firstName: "Tara",
+            lastName: "Ohara",
+            pets: ["Gecko", "Lizard"]
+        }]
+    };
+
+    console.log(myClass.me.pets[2]);
+    console.log(myClass.others[1].lastName);
+    console.log(myClass.others.length);
+    for (var i = 0; i < myClass.others.length; i++){
+    	console.log(myClass.others[i].firstName);
+    }
+    console.log(myClass.others[2].pets[0]);
+
+    myClass.others.push({
+    	firstName: "Adam",
+    	lastName: "Rzepa",
+    	pets: ["Dog", "Cat"]
+    });
+    console.log(myClass.others[3]);
+    for (var i = 0; i < myClass.others.length; i++){
+    	console.log(myClass.others[i].firstName);
+    }
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

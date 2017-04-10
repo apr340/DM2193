@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Input Simple</title>
+
+	<style type="text/css">
+		h1 {
+			text-transform: uppercase;
+		}
+		.red {
+			color: red;
+		}
+		.green {
+			color: green;
+		}
+		.blue {
+			color: blue;
+		}
+		.purple {
+			color: rebeccapurple;
+		}
+	</style>
+	<script type="text/javascript">
+		// change the h1 with the id of change me based on user input when button to submit is clicked
+		// GLOBAL VARIABLES
+		var myBtn;
+		var myHeading;
+		var myNumInput;
+
+		// init actions, things we perform when page has fully rendered
+		document.addEventListener("DOMContentLoaded", function(){
+			myHeading = document.getElementById("change-me");
+			myNumInput = document.getElementById("myNumber");
+			myBtn = document.getElementById("changeBtn");
+
+			// add event listener to the button
+			myBtn.addEventListener("click", changeHeadingColor);
+
+		});
+
+		// color change function that is executed on click via event listener above
+		function changeHeadingColor(){
+			// this will log out entire html element
+			console.log(myNumInput);
+			// we want to extract the value attribute
+			// form elements will always default to string
+			console.log(typeof myNumInput.value);
+			// user parseInt() to be cast as an integer
+			var n = parseInt(myNumInput.value);
+			console.log(typeof n);
+			// rather than having a laundry list of conditionals lets use a switch
+			switch(n){
+				case 0:
+					// if n is = 0 apply class red
+					myHeading.className = "red";
+					break;
+				case 1:
+					// if n is = 0 apply class red
+					myHeading.className = "green";
+					break;
+				case 2:
+					// if n is = 0 apply class red
+					myHeading.className = "blue";
+					break;
+				case 3:
+					// if n is = 0 apply class red
+					myHeading.className = "purple";
+					break;
+				default:
+					// do nothing, but this is the catch all if none of the cases
+			}
+		}
+	</script>
+</head>
+<body>
+
+<h1 id="change-me">Get user input and change color accordingly.</h1>
+<p>Enter a number between 0 and 3 below, click submit and change the class of the h1 above!</p>
+<form>
+	<fieldset>
+		<legend>Pick a number between 0 and 3!</legend>
+		<label for="myNumber">Number</label>
+		<input type="number" name="myNumber" id="myNumber" min="0" max="3" step="1" placeholder="0" value="0">
+		<button type="button" id="changeBtn">Change the H1</button>
+	</fieldset>
+</form>
+
+</body>
+</html>

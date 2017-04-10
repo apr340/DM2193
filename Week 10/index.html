@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Math JS</title>
+	<script type="text/javascript">
+		
+		var x = 15;
+		var y = 35;
+
+		// addition
+		console.log(x + y);
+		// subtraction
+		console.log(x - y);
+		// multiplication
+		console.log(x * y);
+		// division
+		console.log(x / y);
+
+		// modular operator
+		console.log(y % x);
+
+		// just like algebra order of operative 
+		console.log((x + y) * y - 1);
+
+		// increment by 1
+		console.log(x);
+		x++;
+		console.log(x);
+		x += 1;
+		console.log(x);
+		x = x + 1;
+		console.log(x);
+
+		var z = 2.25;
+		var zDwn = Math.floor(z);
+		console.log(zDwn);
+		var zUp = Math.ceil(z);
+		console.log(zUp);
+
+		var num1 = 2.2;
+		var num2 = 2.7;
+		console.log(Math.round(num1));
+		console.log(Math.round(num2));
+
+		var r = Math.random();
+		console.log(r);
+
+		// we can use math random and amth round to get some whole numbers 0 or 1 for a true / false boolean situation
+		var yn = Math.round(Math.random());
+		if (yn === 0){
+			console.log('false');
+		} else {
+			console.log('true');
+		}
+
+		function randNum(n){
+			// when we declare a variable inside a function, the variable "dies" outside of the function
+			var rn = Math.round(n * Math.random());
+			console.log(rn);
+		}
+
+		randNum(100);
+
+		// random number within a range use min and max params this time
+
+		function randNumRange(min, max){
+			var rn = Math.round(Math.random() * (max - min) + min)
+			// console.log(rn);
+			// by returning the value of rn at the end of the function we can use this random generated number anywhere within our script tag
+			return rn;
+		}
+
+		randNumRange(25,35);
+		console.log(randNumRange(6, 23));
+		var myRandom = randNumRange(10, 20);
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

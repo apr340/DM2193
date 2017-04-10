@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Exercise</title>
+	<style type="text/css">
+		#animation {
+			width: 150px;
+			height: 70px;
+			position: absolute;
+			top: 43%;
+			left: 43%;
+		}
+	</style>
+</head>
+<body>
+
+	<button id="animation" onmouseover="relocate()" onclick="change()">Click Me!</button>
+
+	<script type="text/javascript">
+		var hCounter = 0;
+		var clkCounter = 0;
+		var element = document.getElementById("animation");
+
+		function relocate() {
+			var top = 0;
+			var left = 0;
+
+			if (hCounter < 15) {
+				top = Math.random() * 96;
+				left = Math.random() * 96;
+			} else {
+				top = 43;
+				left = 43;
+			}
+
+			hCounter++;
+			element.style.top = top + "%";
+			element.style.left = left + "%";
+			console.log(hCounter);
+
+			if (hCounter === 3) {
+				element.innerHTML = "I Said Click Me";
+			}
+			if (hCounter === 6) {
+				element.innerHTML = "You Can Do It";
+			}
+			if (hCounter === 9) {
+				element.innerHTML = "Got To Be Faster Than That";
+			}
+			if (hCounter === 12) {
+				element.innerHTML = "HAHAHAHA";
+			}
+			if (hCounter === 15) {
+				element.innerHTML = "Alright Fine";
+			}
+		}
+
+		function change() {
+			clkCounter++;
+			console.log(clkCounter);
+
+			if (clkCounter < 31) {
+				element.style.opacity = 1.0 - (clkCounter / 30);
+			} 
+
+			if (clkCounter === 5) {
+				element.innerHTML = "What's Wrong?";
+			}
+			if (clkCounter === 10) {
+				element.innerHTML = "Having Some Problems?";
+			}
+			if (clkCounter === 15) {
+				element.innerHTML = "Quickly! Before I'm Gone!";
+			}
+		}
+
+	</script>
+</body>
+</html>

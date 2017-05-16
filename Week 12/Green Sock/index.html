@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello Green Sock!</title>
+
+	<style type="text/css">
+		#sb{
+			position: absolute;
+			top: 500px;
+			left: 0;
+		}
+	</style>
+
+</head>
+<body>
+
+<img src="soccer-ball.png" id="sb">
+<img src="basket-ball.png" class="bball">
+<img src="basket-ball.png" class="bball">
+<img src="basket-ball.png" class="bball">
+<img src="basket-ball.png" class="bball">
+<img src="basket-ball.png" class="bball">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+
+<script type="text/javascript">
+	var sb = document.getElementById('sb');
+
+	// TweenMax.to(element(s) to animate, length of animation (seconds), {options object})
+	// TweenMax.to( sb, 3, {left:800, top:300})
+	TweenMax.to(sb, 3, {x:800, y:-500, rotation:720, scale:0.5, ease:Elastic.easeOut});
+
+	// We need a fourth parameter for the interval between triggering each animation
+	TweenMax.staggerTo('.bball', 1, {y:500, rotation: 360, delay:0, ease:Bounce.easeOut}, 0.5);
+
+	TweenMax.to(".bball, #sb", 1, {opacity:0, delay:3, onComplete: imDone});
+	// This is our custom callback function that gets fired via onComplete event listener
+	function imDone(){
+		alert('I\'m Done');
+	}
+
+</script>
+
+</body>
+</html>

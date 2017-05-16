@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adam Rzeplinski</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#updates">Updates</a></li>
+        <li><a href="#projects">Project</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="parallax">
+      <h1>Adam Rzeplinski</h1>
+    </div>
+    <div class="parallaxBetween"></div>
+    <!-- Updates section -->
+    <div class="updates clearfix" id="updates">
+        <h2>Updates</h2>
+        <div class="post clearfix">
+            <a href="#"><h3>Echo</h3></a>
+            <p>5/11/16 - Finished the beta version of the game. Playable at its current state but still has a few bugs to work out.</p>
+            <img src="images/post-echo.png">
+        </div>
+        <div class="post clearfix">
+            <a href="#"><h3>Audio Mix</h3></a>
+            <p>5/8/16 - Created a new mix using a few different samples.</p>
+            <img src="images/post-audio-mix.png">
+        </div>
+        <div id="show-more">
+            <div class="post clearfix">
+                <a href="#"><h3>Subway Interface</h3></a>
+                <p>5/2/16 - Finshed an interactive, drawing interface, designed to be displayed on subway station monitors.</p>
+                <img src="images/interface-project2.png">
+            </div>
+            <div class="post clearfix">
+                <a href="#"><h3>Logo Design</h3></a>
+                <p>4/18/16 - Finished the final design of the logo and moved on to applying it to physical items.</p>
+                <img src="images/logo-project-cup-post.png">
+            </div>
+        </div>
+        <button onclick="showMore()" id="show-more-button">Show More</button>
+    </div>
+    <!-- End of Updates -->
+    <div class="parallaxBetween"></div>
+    <!-- Projects section -->
+    <div class="projects clearfix" id="projects">
+        <h2>Projects</h2>
+        <!-- Modal -->
+        <div class="container">
+            <p>Echo</p>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">More Info</button>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="modal-title">Echo</p>
+                        </div>
+                        <div class="modal-body">
+                            <div class="slideshow-block">
+                                <div class="slideshow-container">
+                                    <div class="mySlides">
+                                        <a href="#"><img src="images/Title.png" style="width:100%"></a>
+                                    </div>
+                                    <div class="mySlides">
+                                        <a href="#"><img src="images/Title 2.png" style="width:100%"></a>
+                                    </div>
+                                    <div class="mySlides">
+                                        <a href="#"><img src="images/Game.png" style="width:100%"></a>
+                                    </div>
+                                    <div class="mySlides">
+                                        <a href="#"><img src="images/Game 2.png" style="width:100%"></a>
+                                    </div>
+                                    <div class="mySlides">
+                                        <a href="#"><img src="images/Game 3.png" style="width:100%"></a>
+                                    </div>
+                                    <div class="mySlides">
+                                        <a href="#"><img src="images/Game 4.png" style="width:100%"></a>
+                                    </div>
+                                    <div class="mySlides">
+                                        <a href="#"><img src="images/Game 5.png" style="width:100%"></a>
+                                    </div>
+                                    <div class="mySlides">
+                                        <a href="#"><img src="images/Game 6.png" style="width:100%"></a>
+                                    </div>
+                                    <div class="mySlides">
+                                        <a href="#"><img src="images/Game 7.png" style="width:100%"></a>
+                                    </div>
+                                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                </div>
+                                <div style="text-align:center">
+                                    <span class="dot" onclick="currentSlide(1)"></span>
+                                    <span class="dot" onclick="currentSlide(2)"></span>
+                                    <span class="dot" onclick="currentSlide(3)"></span>
+                                    <span class="dot" onclick="currentSlide(4)"></span>
+                                    <span class="dot" onclick="currentSlide(5)"></span>
+                                    <span class="dot" onclick="currentSlide(6)"></span>
+                                    <span class="dot" onclick="currentSlide(7)"></span>
+                                    <span class="dot" onclick="currentSlide(8)"></span>
+                                    <span class="dot" onclick="currentSlide(9)"></span>
+                                </div>
+                            </div>
+                            <p>A game which revolves around sound. The game starts out as a completely black screen, making it impossible to know anything about your surroundings. The only way to navigate through the area is by making sounds to help map out the things around you.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+        <!-- Modal -->
+        <div class="container" style="background-image: url(images/post-audio-mix.png)">
+            <p>Audio Mix</p>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModalOne">More Info</button>
+            <!-- Modal -->
+            <div class="modal fade" id="myModalOne" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                            <p class="modal-title">Audio Mix</p>
+                        </div>
+                        <div class="modal-body">
+                            <img src="images/post-audio-mix.png">
+                            <p>A remix of an electronic song.</p>
+                            <audio controls>
+                                <source src="#" type="#">
+                            </audio>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- End Modal -->
+        <!-- Modal -->
+        <div class="container" style="background-image: url(images/logo-project-cup.png)">
+            <p>Logo - AVJ</p>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModalTwo">More Info</button>
+            <!-- Modal -->
+            <div class="modal fade" id="myModalTwo" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                            <p class="modal-title">Logo Design</p>
+                        </div>
+                        <div class="modal-body">
+                            <img src="images/logo-project.png">
+                            <p>This is a logo that I designed for an imaginary company video game company called AVJ.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+        <!-- Modal -->
+        <div class="container" style="background-image: url(images/interface-project.png)">
+            <p>Interface</p>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModalThree">More Info</button>
+            <!-- Modal -->
+            <div class="modal fade" id="myModalThree" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                            <p class="modal-title">Subway Interface</p>
+                        </div>
+                        <div class="modal-body">
+                            <img src="images/interface-project.png">
+                            <p>An interface designed for subway station monitors. It's meant to allow people to draw whatever they want and then allow them to share what they made with every other station in New York. It has a graffiti feel to it through the use of a train station as the background as well as a spray can intented as the main drawing tool.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+    </div>
+    <div class="parallaxBetween"></div>
+    <div class="about clearfix" id="about">
+        <h2>About Me</h2>
+        <div class="info clearfix">
+            <img src="images/icon.jpg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget leo cursus, tempor nunc ullamcorper, lacinia augue. Mauris pulvinar diam vel dolor condimentum sagittis. Morbi ornare convallis rhoncus. Sed sagittis dolor et euismod malesuada. Duis fermentum sem eget sapien hendrerit, et accumsan augue eleifend. Sed sed cursus massa. Curabitur ut nisl vel eros facilisis tincidunt sit amet quis enim.</p>
+        </div>
+        <div class="info clearfix">
+            <p>Pellentesque eget quam ac velit gravida varius eget at tellus. Aenean ac urna et mauris suscipit euismod sed at est. Praesent nec mi vel erat venenatis condimentum. Sed dignissim finibus tristique. Maecenas at ante semper, pharetra justo sit amet, imperdiet elit. Cras fermentum elementum venenatis. Nam at velit ac lectus dapibus feugiat. Mauris non nunc euismod, pretium urna sed, bibendum enim. Nunc ut tincidunt risus.</p>
+            <img src="images/icon-two.png">
+        </div>
+    </div>
+    <div class="parallaxBetween"></div>
+    <div class="contact clearfix" id="contact">
+        <h2>Contact Me</h2>
+        <form action="mailto:adamrzep71@gmail.com" method="post" enctype="text/plain">
+            <p>First Name:</p>
+            <input type="text" name="first-name" id="firstname-field">
+            <p>Last Name:</p>
+            <input type="text" name="last-name" id="lastname-field">
+            <p>E-mail:</p>
+            <input type="text" name="email" id="email-field">
+            <br>
+            <p>Message:</p>
+            <textarea name="Text1" cols="40" rows="5"></textarea>
+            <br>
+            <input type="submit" value="Send" id="submit-button">
+        </form>
+    </div>
+    <div class="parallaxBetween"></div>
+    <script type="text/javascript">
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+
+
+    function showMore() {
+        var x = document.getElementById('show-more');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+    </script>
+</body>
+
+</html>
